@@ -184,7 +184,7 @@ function fillBoard() {
 }
 
 function cardClicked(e) {
-    if (secondCard || $(this).hasClass("matched")) return
+    if (secondCard || $(this).hasClass("matched") || $(this).hasClass("flip")) return
     
     if (!firstCard) {
         firstCard = $(this)
