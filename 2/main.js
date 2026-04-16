@@ -34,7 +34,7 @@ function startTime() {
         $(".time").val(time).trigger("change")
         if (time == 0) {
             alertify.error("Time is out!")
-            setTimeout(() => window.open("/../1/index.html", "_self", false), 2000)
+            setTimeout(() => window.open("../1/index.html", "_self", false), 2000)
             localStorage.removeItem("time")
         } else if (time > 0) localStorage.setItem("time", time)
     }, 1000)
