@@ -24,7 +24,6 @@ $(function () {
     startRebus(num)
 
     $("#btnTask1").click(function () {
-        console.log(answers[num - 1])
         if ($("#inputTask1").val().trim().toLowerCase() == `${answers[num - 1]}`) {
             alertify.success("Правильна відповідь!")
             $("#inputTask1").val("")
