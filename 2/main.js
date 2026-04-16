@@ -73,7 +73,6 @@ $(function () {
     })
 
     $("#btnTask1").click(function () {
-        console.log(answers[num - 1])
         if (answers[num - 1].indexOf($("#inputTask1").val().trim().toLowerCase()) != -1) {
             alertify.success("Правильна відповідь!")
             $("#inputTask1").val("")
