@@ -1,0 +1,121 @@
+* {
+    font-family: "Bitcount Prop Single", system-ui;
+    /* font-optical-sizing: auto; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('bg.JPG');  
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    flex-direction: column;
+}
+
+snow-effect {
+    position: fixed;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+a {
+    text-decoration: none;
+    margin-top: 200px;
+}
+
+h1, h2, a {
+    background: #4f9642;
+    background: linear-gradient(90deg, rgba(79, 150, 66, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(184, 171, 75, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 30s infinite ease-in-out;
+    font-size: 70px;
+}
+
+.liquid-glass-btn {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(12px) url(#distortion) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    isolation: isolate;
+    box-shadow: 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+        inset 1.8px 3px 0 -2px rgba(255, 255, 255, 0.27),
+        inset -2px -2px 0 -2px rgba(255, 255, 255, 0.24),
+        inset -3px -8px 1px -6px rgba(255, 255, 255, 0.18),
+        inset -0.3px -1px 4px 0 rgba(0, 0, 0, 0.24),
+        inset -1.5px 2.5px 0 -2px rgba(0, 0, 0, 0.4),
+        inset 0 3px 4px -2px rgba(0, 0, 0, 0.4),
+        inset 2px -6.5px 1px -4px rgba(0, 0, 0, 0.2),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2),
+        0 6px 16px 0 rgba(0, 0, 0, 0.16);
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rainbow {
+    100%, 0% {
+        color: white;
+    }
+
+    8% {
+        color: black;
+    }
+
+    16% {
+        color: white;
+    }
+
+    25% {
+        color: black;
+    }
+
+    33% {
+        color: white;
+    }
+
+    41% {
+        color: black;
+    }
+
+    50% {
+        color: white;
+    }
+
+    58% {
+        color: black;
+    }
+
+    66% {
+        color: white;
+    }
+
+    74% {
+        color: black;
+    }
+
+    82% {
+        color: white;
+    }
+
+    90% {
+        color: black;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
