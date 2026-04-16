@@ -1,0 +1,190 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('bg.JPG');
+    overflow: hidden;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+snow-effect {
+    position: fixed;
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+#nextTask {
+    display: none;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.liquid-glass-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;      
+    height: 52px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(12px) url(#distortion) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    isolation: isolate;
+    box-shadow: 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+        inset 1.8px 3px 0 -2px rgba(255, 255, 255, 0.27),
+        inset -2px -2px 0 -2px rgba(255, 255, 255, 0.24),
+        inset -3px -8px 1px -6px rgba(255, 255, 255, 0.18),
+        inset -0.3px -1px 4px 0 rgba(0, 0, 0, 0.24),
+        inset -1.5px 2.5px 0 -2px rgba(0, 0, 0, 0.4),
+        inset 0 3px 4px -2px rgba(0, 0, 0, 0.4),
+        inset 2px -6.5px 1px -4px rgba(0, 0, 0, 0.2),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2),
+        0 6px 16px 0 rgba(0, 0, 0, 0.16);
+    border: none;
+    cursor: pointer;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#inputTask1 {
+    border: none;
+    border-bottom: 2px solid red;
+    outline: none;
+    padding: 5px 0;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+.liquid-glass-rounded-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background-color: rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(12px) url(#distortion) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    isolation: isolate;
+    box-shadow: 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+        inset 1.8px 3px 0 -2px rgba(255, 255, 255, 0.27),
+        inset -2px -2px 0 -2px rgba(255, 255, 255, 0.24),
+        inset -3px -8px 1px -6px rgba(255, 255, 255, 0.18),
+        inset -0.3px -1px 4px 0 rgba(0, 0, 0, 0.24),
+        inset -1.5px 2.5px 0 -2px rgba(0, 0, 0, 0.4),
+        inset 0 3px 4px -2px rgba(0, 0, 0, 0.4),
+        inset 2px -6.5px 1px -4px rgba(0, 0, 0, 0.2),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2),
+        0 6px 16px 0 rgba(0, 0, 0, 0.16);
+    border: none;
+    cursor: pointer;
+    transition: transform ease 0.05s;
+}
+
+.liquid-glass-rounded-btn:active {
+    transform: scale(0.9);
+}
+
+.taskProgress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.absolute {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.img {
+    min-width: 50%;
+    max-width: 90%;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+/* 
+.taskProgress, .timeProgress {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeProgress {
+    left: 50px;
+    top: 50px;
+} */
+
+.timeProgress {
+    right: 50px;
+    top: 50px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.sound, .answer {
+    display: none;
+}
